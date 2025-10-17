@@ -1,6 +1,6 @@
 <?php
 // Use a consistent name for your database connection file
-include 'db_connect.php'; 
+include 'config.php'; 
 
 // --- Fetch all counts in one go for efficiency ---
 
