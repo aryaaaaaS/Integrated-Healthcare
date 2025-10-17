@@ -1,6 +1,6 @@
 <?php
 // Use a consistent name for your database connection file
-include 'db_connect.php'; 
+include 'config.php'; 
 
 // Variable to store any feedback message for the user
 $message = '';
