@@ -2,44 +2,40 @@
 // PHP code starts here
 
 // 1. Database Connection
-// Note: Create a 'db_connect.php' file with your database credentials
-// or replace the line below with your actual connection code.
-include 'config.php'; // Assuming you have a file to connect to the DB
+// Use config.php (not db_connect.php) — it’s in the same folder.
+include(__DIR__ . '/config.php');
 
 // 2. Fetch Data - Get counts from the database tables
-// Initialize counts to 0
 $patient_count = 0;
 $doctor_count = 0;
 $medicine_count = 0;
 
 // Query to get the total number of patients
 $sql_patients = "SELECT COUNT(id) as total_patients FROM patients";
-$result_patients = $conn->query($sql_patients);
-if ($result_patients && $result_patients->num_rows > 0) {
-    $row = $result_patients->fetch_assoc();
+$result_patients = mysqli_query($conn, $sql_patients);
+if ($result_patients && mysqli_num_rows($result_patients) > 0) {
+    $row = mysqli_fetch_assoc($result_patients);
     $patient_count = $row['total_patients'];
 }
 
 // Query to get the total number of doctors
 $sql_doctors = "SELECT COUNT(id) as total_doctors FROM doctors";
-$result_doctors = $conn->query($sql_doctors);
-if ($result_doctors && $result_doctors->num_rows > 0) {
-    $row = $result_doctors->fetch_assoc();
+$result_doctors = mysqli_query($conn, $sql_doctors);
+if ($result_doctors && mysqli_num_rows($result_doctors) > 0) {
+    $row = mysqli_fetch_assoc($result_doctors);
     $doctor_count = $row['total_doctors'];
 }
 
 // Query to get the total number of medicines
 $sql_medicines = "SELECT COUNT(id) as total_medicines FROM medicines";
-$result_medicines = $conn->query($sql_medicines);
-if ($result_medicines && $result_medicines->num_rows > 0) {
-    $row = $result_medicines->fetch_assoc();
+$result_medicines = mysqli_query($conn, $sql_medicines);
+if ($result_medicines && mysqli_num_rows($result_medicines) > 0) {
+    $row = mysqli_fetch_assoc($result_medicines);
     $medicine_count = $row['total_medicines'];
 }
 
 // Close the connection
-$conn->close();
-
-// PHP code ends here. The HTML part will now use the variables above.
+mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +50,6 @@ $conn->close();
 </head>
 <body>
     <header>
-        <!-- ... existing header HTML code ... -->
         <div class="container">
             <div class="header-content">
                 <div class="brand">
@@ -81,7 +76,6 @@ $conn->close();
 
     <main class="container">
         <section class="hero">
-             <!-- ... existing hero section HTML code ... -->
             <h2 class="title">All-in-One Healthcare & Pharmacy Management</h2>
             <p class="subtitle">Streamline your clinic's operations with a simple, fast, and modern management system. Handle patients, doctors, and inventory with ease.</p>
             <div class="cta-buttons">
@@ -98,7 +92,6 @@ $conn->close();
                 </div>
                 <div>
                     <h4>Total Patients</h4>
-                    <!-- This is where we display the PHP variable -->
                     <p class="stat-number"><?php echo $patient_count; ?></p>
                 </div>
             </div>
@@ -108,7 +101,6 @@ $conn->close();
                 </div>
                 <div>
                     <h4>Total Doctors</h4>
-                     <!-- This is where we display the PHP variable -->
                     <p class="stat-number"><?php echo $doctor_count; ?></p>
                 </div>
             </div>
@@ -118,14 +110,12 @@ $conn->close();
                 </div>
                 <div>
                     <h4>Medicine Types</h4>
-                     <!-- This is where we display the PHP variable -->
                     <p class="stat-number"><?php echo $medicine_count; ?></p>
                 </div>
             </div>
         </div>
 
         <div class="content-grid">
-             <!-- ... The rest of your existing HTML code for cards ... -->
             <div class="card">
                 <div class="card-header">
                     <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
