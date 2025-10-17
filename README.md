@@ -1,115 +1,95 @@
-Integrated Healthcare & Pharmacy Management System
+<div align="center">
+  <br />
+  <h1>💊 Integrated Healthcare & Pharmacy Management System</h1>
+  <strong>
+    A full-stack PHP & MySQL platform designed to streamline patient records, doctor data, prescriptions, and medicine inventory — all under one unified interface.
+  </strong>
+  <br /><br />
+  <img src="https://img.shields.io/badge/PHP-Backend-blue?logo=php&logoColor=white" alt="PHP Badge"/>
+  <img src="https://img.shields.io/badge/MySQL-Database-orange?logo=mysql&logoColor=white" alt="MySQL Badge"/>
+  <img src="https://img.shields.io/badge/HTML5-Frontend-red?logo=html5&logoColor=white" alt="HTML Badge"/>
+  <img src="https://img.shields.io/badge/CSS3-Styling-blue?logo=css3&logoColor=white" alt="CSS Badge"/>
+  <img src="https://img.shields.io/badge/XAMPP-Server-lightgrey?logo=xampp&logoColor=white" alt="XAMPP Badge"/>
+</div>
 
-A full-stack web application built with PHP and MySQL to efficiently manage patients, doctors, medicines, and prescriptions for a local clinic or pharmacy. This system features a clean, modern, and user-friendly interface designed for seamless daily operations.
+---
 
-✨ Key Features
+## 📋 Table of Contents
 
-Dashboard: A central hub for quick navigation and a high-level overview.
+1. [✨ Key Features](#-key-features)  
+2. [📸 Screenshots](#-screenshots)  
+3. [🛠️ Tech Stack](#️-tech-stack)  
+4. [🚀 Getting Started](#-getting-started)  
+5. [📂 Project Structure](#-project-structure)  
+6. [📄 License](#-license)
 
-Medicine Management: Easily add, view, and manage medicine inventory, including stock levels, pricing, and expiry dates.
+---
 
-Doctor Records: Maintain a comprehensive directory of doctors and their specializations.
+## ✨ Key Features
 
-Patient Management: Handle all patient information, from registration to record-keeping.
+🧑‍🤝‍🧑 **Patient Management**  
+Easily add, edit, and view complete patient records through a centralized panel.
 
-Prescription Handling: Create and manage digital prescriptions that link patients, doctors, and medicines together.
+👨‍⚕️ **Doctor Directory**  
+Maintain detailed records of doctors including specialization, contact info, and assigned patients.
 
-Insightful Reports: Generate basic summaries and reports to get a clear picture of the clinic's activities.
+💊 **Medicine Inventory Control**  
+Track stock levels, pricing, and expiry dates — ensuring zero medicine wastage.
 
-Modern UI: A clean, responsive, and intuitive user interface built with HTML5 and a modern CSS design system.
+📄 **Prescription Handling**  
+Seamlessly link patients, doctors, and medicines through smart dropdown integrations.
 
-📸 Screenshots
+📊 **Dynamic Dashboard**  
+A real-time snapshot of system metrics like total patients, doctors, and available medicines.
 
-<details>
-<summary>Click to view screenshots</summary>
+📈 **Comprehensive Reports**  
+Access module-wise summaries and total record counts for quick decision-making.
 
-Dashboard
+🎨 **Modern UI/UX**  
+Responsive and professional interface with a clean CSS variable-based design system.
 
-Add Doctor Form
+---
 
+## 📸 Screenshots
 
+Here’s a quick glimpse of the system interface and functionality:
 
+### 🏠 Dashboard  
+Displays summarized system data and activity insights.  
 
+### 👥 Manage Patients  
+Add, view, and update patient records with ease.  
 
-Medicines List
+### 💊 Manage Medicines  
+Keep tabs on medicine quantities, expiry alerts, and price listings.  
 
-Add Patient Form
+### 📜 Manage Prescriptions  
+Generate prescriptions by linking patients, doctors, and medicines dynamically.
 
+---
 
+## 🛠️ Tech Stack
 
+| Layer | Technology | Description |
+|-------|-------------|-------------|
+| **Frontend** | HTML5, CSS3 | Responsive UI with modern design components |
+| **Backend** | PHP | Server-side logic, CRUD operations, and integration |
+| **Database** | MySQL | Stores and manages relational data |
+| **Server** | Apache (via XAMPP) | Local server environment for deployment |
 
+---
 
-</details>
+## 🚀 Getting Started
 
-🚀 Getting Started
+Follow these steps to run the project on your local environment.
 
-Follow these steps to set up the project on your local machine.
+### ✅ Prerequisites  
+- Install **[XAMPP](https://www.apachefriends.org/)** (includes Apache, MySQL, and PHP)  
+- Ensure services for **Apache** and **MySQL** are running
 
-Prerequisites
+### 🧭 Installation
 
-A local server environment like XAMPP or WAMP.
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
 
-A web browser like Chrome, Firefox, or Edge.
-
-A code editor like VS Code.
-
-Installation Steps
-
-Clone the repository:
-
-git clone [https://github.com/YourUsername/your-repo-name.git](https://github.com/YourUsername/your-repo-name.git)
-
-
-Or download the ZIP file from GitHub.
-
-Set up the server:
-
-Copy the project folder into your server's root directory (htdocs for XAMPP).
-
-Start your server:
-
-Open the XAMPP Control Panel and start the Apache and MySQL modules.
-
-Create and set up the database:
-
-Open phpMyAdmin (http://localhost/phpmyadmin).
-
-Create a new database named pharmacy.
-
-Select the pharmacy database and go to the Import tab.
-
-Upload the database/pharmacy.sql file from the project folder.
-
-Run the application:
-
-Open your web browser and navigate to http://localhost/your-project-folder-name/.
-
-You should now see the application's home page!
-
-🛠️ Tech Stack
-
-Backend: PHP
-
-Database: MySQL
-
-Frontend: HTML5, CSS3 (with a custom design system using CSS Variables)
-
-Server: Apache (via XAMPP)
-
-🤝 Contributing
-
-Contributions are welcome! If you have ideas for improvements or find any bugs, feel free to open an issue or create a pull request.
-
-Fork the Project
-
-Create your Feature Branch (git checkout -b feature/NewFeature)
-
-Commit your Changes (git commit -m 'Add some NewFeature')
-
-Push to the Branch (git push origin feature/NewFeature)
-
-Open a Pull Request
-
-📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
