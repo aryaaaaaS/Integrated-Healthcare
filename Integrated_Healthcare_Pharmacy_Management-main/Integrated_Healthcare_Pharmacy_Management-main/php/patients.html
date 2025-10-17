@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient | Integrated Healthcare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="brand">
+                    <a href="index.html" class="logo">
+                        <!-- SVG Icon for Logo -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </a>
+                    <h1>Integrated Healthcare</h1>
+                </div>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a class="active" href="patients.html">Patients</a>
+                    <a href="doctors.html">Doctors</a>
+                    <a href="medicines.html">Medicines</a>
+                    <a href="prescriptions.html">Prescriptions</a>
+                    <a href="reports.html">Reports</a>
+                    <span class="nav-spacer"></span>
+                    <span class="nav-cta"><a class="btn btn-primary" href="patients.php">View Patients</a></span>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <div class="form-container card">
+            <div class="card-header">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg></div>
+                <h3>Add New Patient</h3>
+            </div>
+            <p>Enter the patient's details below to create a new record.</p>
+            
+            <form action="patients.php" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input id="name" name="name" type="text" placeholder="e.g. John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                         <select id="gender" name="gender" required>
+                            <option value="" disabled selected>Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="contact">Contact Number</label>
+                        <input id="contact" name="contact" type="tel" placeholder="e.g. +91 98765 43210" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="address">Address</label>
+                        <input id="address" name="address" type="text" placeholder="e.g. 123 Main St, City" required>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit" name="add">Save Patient</button>
+                    <a class="btn btn-ghost" href="patients.php">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Integrated Healthcare & Pharmacy. All Rights Reserved.
+    </footer>
+</body>
+</html>
