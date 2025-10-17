@@ -4,7 +4,7 @@
 // 1. Database Connection
 // Note: Create a 'db_connect.php' file with your database credentials
 // or replace the line below with your actual connection code.
-include 'db_connect.php'; // Assuming you have a file to connect to the DB
+include 'config.php'; // Assuming you have a file to connect to the DB
 
 // 2. Fetch Data - Get counts from the database tables
 // Initialize counts to 0
